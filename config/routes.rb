@@ -9,6 +9,9 @@ Rails.application.routes.draw do
         resources :products, only: [:create, :update, :destroy, :index, :show] # Admin CRUD with image upload
         # resources :users, only: [:index, :destroy]
       end
+
+      resource :cart, only: [:show]
+      resources :cart_items, only: [:create, :destroy, :index, :update]
       
       # Orders (authenticated users)
       # resources :orders, only: [:create, :index, :show]

@@ -1,5 +1,5 @@
-class Users::SessionsController < Devise::SessionsController
-  skip_before_action :verify_authenticity_token
+class Users::SessionsController < ApplicationController
+  # skip_before_action :verify_authenticity_token
   skip_before_action :authenticate_user_from_token!
   respond_to :json
 
